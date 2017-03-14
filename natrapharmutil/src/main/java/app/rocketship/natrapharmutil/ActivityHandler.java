@@ -50,6 +50,7 @@ public class ActivityHandler {
     }
 
     public static void afterSplashActivity(final Context splashActivity, final Class<?> registerClass, final Class<?> localMenuClass){
+
         DataHandler.setCurrentContext(splashActivity);
 
         if(DataHandler.hasUserData()) {

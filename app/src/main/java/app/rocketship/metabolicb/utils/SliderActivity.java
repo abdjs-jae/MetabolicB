@@ -30,13 +30,14 @@ public class SliderActivity extends AppCompatActivity {
 
         pagerAdapter = new SliderFragmentPagerAdapter(getSupportFragmentManager(), MainActivity.selectedPage);
         sliderViewPager.setAdapter(pagerAdapter);
+        sliderViewPager.setOffscreenPageLimit(2);
         tabLayout.setupWithViewPager(sliderViewPager, true);
     }
 
     private void switchSliders(PageSlidesHandler.Page page){
 
         DataHandler.setCurrentContext(this);
-        DataHandler.savePageClick(page.getKey());
+        // DataHandler.savePageClick(page.getKey());
 
         MainActivity.selectedPage = page;
 

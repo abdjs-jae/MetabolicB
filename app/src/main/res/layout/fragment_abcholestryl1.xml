@@ -2,12 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="metabolicb.rocketship.app.metabolicb.slides.ABCholestryl1Fragment">
+    tools:context="app.rocketship.metabolicb.slides.ABCholestryl1Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_abc1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:src="@drawable/abc_1"
+        android:background="@drawable/abc_1" />
 
 </FrameLayout>

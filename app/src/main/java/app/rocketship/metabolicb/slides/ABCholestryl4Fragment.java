@@ -1,6 +1,5 @@
 package app.rocketship.metabolicb.slides;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,7 +13,6 @@ import app.rocketship.metabolicb.R;
  */
 public class ABCholestryl4Fragment extends Fragment {
 
-
     public ABCholestryl4Fragment() {
         // Required empty public constructor
     }
@@ -23,8 +21,11 @@ public class ABCholestryl4Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_abcholestryl4, container, false);
+
+        ViewGroup rootView = (ViewGroup) inflater
+                .inflate(R.layout.fragment_abcholestryl4, container, false);
+
+        return rootView;
     }
 
 }

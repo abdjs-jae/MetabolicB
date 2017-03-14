@@ -32,4 +32,5 @@ dependencies {
     compile 'org.apache.directory.studio:org.apache.commons.io:2.4'
     compile project(path: ':volley-master')
     compile project(':natrapharmutil')
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
 }
