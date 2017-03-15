@@ -7,8 +7,6 @@
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gif_abc3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/test_gif"
-        android:background="@drawable/test_gif" />
+        android:layout_height="match_parent" />
 
 </FrameLayout>

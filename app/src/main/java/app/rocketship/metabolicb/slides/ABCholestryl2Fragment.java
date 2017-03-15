@@ -27,17 +27,20 @@ public class ABCholestryl2Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        //buttonPlayVideo.setOnClickListener(new View.OnClickListener() {
-            //@Override
-            //public void onClick(View v) {
-                //Intent i = new Intent(, ABCholestryl2VideoActivity.class);
-                //startActivity(i);
-                //finish();
-            //}
-        //});
+        View v = inflater.inflate(R.layout.fragment_abcholestryl2, container, false);
+
+        buttonPlayVideo = (Button) v.findViewById(R.id.button_playvideo);
+
+        buttonPlayVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), ABCholestryl2VideoActivity.class);
+                startActivity(i);
+            }
+        });
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_abcholestryl2, container, false);
+        return v;
     }
 
 }

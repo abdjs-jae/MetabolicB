@@ -19,11 +19,11 @@ import pl.droidsonroids.gif.GifImageView;
 public class ABCholestryl1Fragment extends Fragment {
 
     GifImageView abc1;
+    GifDrawable gif_abc1;
 
-    public ABCholestryl1Fragment() {
+    public ABCholestryl1Fragment(){
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,15 +32,29 @@ public class ABCholestryl1Fragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_abcholestryl1, container, false);
 
         abc1 = (GifImageView) v.findViewById(R.id.gif_abc1);
-
-        if(this.isHidden())
-            ((GifDrawable)abc1.getDrawable()).stop();
-
-        Log.d("AB1 Fragment", ((GifDrawable)abc1.getDrawable()).getNumberOfFrames() + "");
-        Log.d("AB1 Fragment", ((GifDrawable)abc1.getDrawable()).getDuration() + "");
+        try {
+            // If it is not the frist fragment, stop the GIF to save memory
+            gif_abc1 = new GifDrawable(getResources(), R.drawable.abcholestryl_1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        abc1.setImageDrawable(gif_abc1);
 
         // Inflate the layout for this fragment
         return v;
     }
 
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if(gif_abc1 != null) {
+            if (isVisibleToUser) {
+                gif_abc1.start();
+                Log.d(this.getClass().toString(), "GIF start");
+            } else {
+                gif_abc1.stop();
+                Log.d(this.getClass().toString(), "GIF stop");
+            }
+        }
+    }
 }

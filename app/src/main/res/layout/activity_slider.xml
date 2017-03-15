@@ -16,11 +16,10 @@
         android:id="@+id/sliderViewPager" />
 
     <android.support.percent.PercentRelativeLayout
-        android:id="@+id/brezu_bottomlayout"
+        android:id="@+id/prl_slider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:background="#66ffffff"
         android:layout_gravity="bottom">
 
         <android.support.design.widget.TabLayout

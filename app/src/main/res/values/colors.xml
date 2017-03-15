@@ -7,4 +7,7 @@
     <color name="tab_notSelected">#5e5e5d</color>
     <color name="tab_selected">#c1bebe</color>
     <color name="black_overlay">#66000000</color>
+
+    <color name="abcholestryl">#f24d10</color>
+    <color name="velmetia">#2db5ea</color>
 </resources>

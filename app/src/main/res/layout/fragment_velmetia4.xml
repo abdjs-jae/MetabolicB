@@ -5,4 +5,9 @@
     android:background="@drawable/blue_bg"
     tools:context="app.rocketship.metabolicb.slides.Velmetia4Fragment">
 
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_velmetia4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </FrameLayout>
