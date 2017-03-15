@@ -14,7 +14,7 @@ import app.rocketship.natrapharmutil.sqlite.SQLiteSingleton;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView ivABC, ivVelmetia;
+    ImageView ivABC, ivVelmetia, ivBack;
 
     public static PageSlidesHandler.Page selectedPage;
 
@@ -22,6 +22,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ivBack = (ImageView) findViewById(R.id.iv_back);
+        ivBack.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                ActivityHandler.goToLanding(MainActivity.this);
+
+            }
+
+        });
 
         ivABC = (ImageView) findViewById(R.id.iv_abcholestryl);
         ivVelmetia = (ImageView) findViewById(R.id.iv_velmetia);

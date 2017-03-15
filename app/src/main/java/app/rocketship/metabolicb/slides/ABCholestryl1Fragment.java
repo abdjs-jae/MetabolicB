@@ -35,6 +35,7 @@ public class ABCholestryl1Fragment extends Fragment {
         try {
             // If it is not the frist fragment, stop the GIF to save memory
             gif_abc1 = new GifDrawable(getResources(), R.drawable.abcholestryl_1);
+            gif_abc1.setSpeed(8.0f);
         } catch (IOException e) {
             e.printStackTrace();
         }

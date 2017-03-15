@@ -59,10 +59,12 @@ public class SliderActivity extends AppCompatActivity {
     private void setFooterColor(PageSlidesHandler.Page page){
         switch(page){
             case ABCHOLESTRYL: {
-                prlSlider.setBackgroundColor(Color.parseColor("#f24d10"));
+                // red orange
+                prlSlider.setBackgroundColor(Color.parseColor("#f24d10")); break;
             }
             case VELMETIA:{
-                prlSlider.setBackgroundColor(Color.parseColor("#2db5ea"));
+                // light blue
+                prlSlider.setBackgroundColor(Color.parseColor("#2db5ea")); break;
             }
         }
     }

@@ -70,7 +70,7 @@ public class ABCholestryl2VideoActivity extends AppCompatActivity {
             public void onCompletion(MediaPlayer mp) {
 
                 finish();
-                overridePendingTransition( 0, R.anim.fade_in );
+                overridePendingTransition( R.anim.fade_in, R.anim.screen_splash_fade_out );
 
             }
 

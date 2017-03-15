@@ -34,6 +34,7 @@ public class Velmetia1Fragment extends Fragment {
         velmetia1 = (GifImageView) v.findViewById(R.id.gif_velmetia1);
         try {
             gif_velmetia1 = new GifDrawable(getResources(), R.drawable.velmetia_1);
+            gif_velmetia1.setSpeed(8.0f);
         } catch (IOException e) {
             e.printStackTrace();
         }

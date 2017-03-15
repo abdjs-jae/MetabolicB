@@ -52,6 +52,7 @@ public class ABCholestryl7Fragment extends Fragment {
         if(gif_abc7 != null) {
             if (isVisibleToUser) {
                 gif_abc7.start();
+                gif_abc7.setSpeed(8.0f);
                 Log.d(this.getClass().toString(), "GIF start");
             } else {
                 gif_abc7.stop();
