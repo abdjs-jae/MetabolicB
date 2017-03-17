@@ -22,8 +22,16 @@ public class ActivityHandler {
 
     }
 
-    public static void goToLanding(Context currentContext){
-        Intent i = new Intent(currentContext, LandingActivity.class);
+    public static void goToProfile(Context currentContext){
+        Intent i = new Intent(currentContext, ProfileActivity.class);
+        currentContext.startActivity(i);
+
+        ((Activity) currentContext).finish();
+        ((Activity) currentContext).overridePendingTransition(0, R.anim.screen_splash_fade_out);
+    }
+
+    public static void goToMenu(Context currentContext){
+        Intent i = new Intent(currentContext, menuClass);
         currentContext.startActivity(i);
 
         ((Activity) currentContext).finish();
@@ -56,7 +64,7 @@ public class ActivityHandler {
         if(DataHandler.hasUserData()) {
 
             setMenuClass(localMenuClass);
-            changeActivity(splashActivity, LandingActivity.class);
+            changeActivity(splashActivity, localMenuClass);
 
         }
         else
@@ -68,7 +76,7 @@ public class ActivityHandler {
                             DataHandler.setUserData(result);
 
                             setMenuClass(localMenuClass);
-                            changeActivity(splashActivity, LandingActivity.class);
+                            changeActivity(splashActivity, localMenuClass);
 
                             /* So instead of changing the activity directly to 'menuClass',
                             I want you to change it to LandingActivity.

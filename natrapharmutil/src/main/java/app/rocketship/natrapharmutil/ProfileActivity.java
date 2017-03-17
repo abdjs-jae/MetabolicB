@@ -78,7 +78,7 @@ public class ProfileActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                ActivityHandler.goToLanding(ProfileActivity.this);
+                ActivityHandler.goToMenu(ProfileActivity.this);
             }
 
         });

@@ -76,4 +76,12 @@ public class ABCholestryl2VideoActivity extends AppCompatActivity {
 
         });
     }
+
+    @Override
+    public void onBackPressed() {
+
+        finish();
+        overridePendingTransition( R.anim.fade_in, R.anim.screen_splash_fade_out );
+
+    }
 }

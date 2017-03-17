@@ -1,6 +1,7 @@
 package app.rocketship.metabolicb;
 
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,11 +11,12 @@ import app.rocketship.metabolicb.utils.PageSlidesHandler;
 import app.rocketship.metabolicb.utils.SliderActivity;
 import app.rocketship.natrapharmutil.ActivityHandler;
 import app.rocketship.natrapharmutil.DataHandler;
+import app.rocketship.natrapharmutil.ProfileActivity;
 import app.rocketship.natrapharmutil.sqlite.SQLiteSingleton;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView ivABC, ivVelmetia, ivBack;
+    ImageView ivABC, ivVelmetia, ivBack, ivProfile;
 
     public static PageSlidesHandler.Page selectedPage;
 
@@ -29,7 +31,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                ActivityHandler.goToLanding(MainActivity.this);
+                ActivityHandler.goHome(MainActivity.this);
+
+            }
+
+        });
+
+        ivProfile = (ImageView) findViewById(R.id.iv_profile);
+        ivProfile.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                ActivityHandler.goToProfile(MainActivity.this);
 
             }
 
@@ -56,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     private void goToSliderActivity(PageSlidesHandler.Page page){
 
         DataHandler.setCurrentContext(this);
-        // DataHandler.savePageClick(page.getKey());
+        DataHandler.savePageClick(page.getKey());
 
         // DataHandler.printClicks();
 
@@ -71,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        ActivityHandler.goToLanding(MainActivity.this);
+        ActivityHandler.goHome(MainActivity.this);
     }
 
     @Override
