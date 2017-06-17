@@ -49,15 +49,17 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        ivABC = (ImageView) findViewById(R.id.iv_abcholestryl);
+        // ivABC = (ImageView) findViewById(R.id.iv_abcholestryl);
         ivVelmetia = (ImageView) findViewById(R.id.iv_velmetia);
 
+        /*
         ivABC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToSliderActivity(PageSlidesHandler.Page.ABCHOLESTRYL);
             }
         });
+        */
 
         ivVelmetia.setOnClickListener(new View.OnClickListener() {
             @Override
